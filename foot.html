@@ -71,7 +71,30 @@
         <main role="main" class="pb-3">
             <h1>Random Bot Commands</h1>
 
-<p>This page is under construction as of 10/28/2020.</p>
+            <style>
+                .expandable {
+                    width:90%;
+                    height:100px;
+                    transition: .3s;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                
+                .expanded {
+                    width:90%;
+                    height:250px!important;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                </style>
+                
+                <div class="expandable" id="1" onclick="expand(this.id)" style="background-color:#515151;">
+                
+                </div>
+                
+                <script>
+                function expand(id){if (document.getElementById(id).clientHeight == 100){document.getElementById(id).className = "expandable expanded"}else{document.getElementById(id).className = "expandable"}}
+                </script>
 
         </main>
     </div>
