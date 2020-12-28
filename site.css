@@ -36,8 +36,8 @@ html {
 }
 
 .border-top {
-  border-top: 200px solid
-  rgb(61, 61, 61);
+  border-top: 200px solid;
+  background-color: rgb(61, 61, 61);
 }
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
