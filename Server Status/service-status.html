@@ -1,0 +1,36 @@
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
+<script src="https://unpkg.com/@statuspage/status-widget/dist/index.js"></script>
+
+<a><statuspage-widget style="color:black;font-size:12px;font-weight:bold;pointer-events: none;" src="https://cosmosbot.statuspage.io"></statuspage-widget></a>
+<div class="container">
+    <main role="main" class="pb-3">
+        <h1>Random Bot Commands</h1>
+
+        <style>
+            .expandable {
+                width:90%;
+                height:100px;
+                transition: .3s;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .expanded {
+                width:90%;
+                height:250px!important;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            </style>
+            
+            <div class="expandable" id="1" onclick="expand(this.id)" style="background-color:#515151;">
+            
+            </div>
+            
+            <script>
+            function expand(id){if (document.getElementById(id).clientHeight == 100){document.getElementById(id).className = "expandable expanded"}else{document.getElementById(id).className = "expandable"}}
+            </script>
+
+    </main>
+</div>

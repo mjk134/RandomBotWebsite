@@ -1,4 +1,8 @@
 ﻿.navbar-dark .navbar-nav .navbar-expand-md .nav-link {
   color: silver;
 }
+.invite:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,123,219),0 17px 50px 0 rgba(0,0,0,0.19);
+  text-shadow: 0 0 1px rgba(0,0,0,0.19), 0 0 1px rgba(0,0,0,0.19), 0 0 5px rgba(0,0,0,0.19), 0 0 10px rgba(0,0,0,0.19), 0 0 10px rgba(0,0,0,0.19), 0 0 15px rgba(0,0,0,0.19), 0 0 15px rgba(0,0,0,0.19);
+}
 

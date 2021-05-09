@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <!-- Required meta tags -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="public/site.js" type="text/JavaScript"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,30 +12,84 @@
     <link rel="stylesheet" type="text/css" href="site.css">
     <title>Ultra Banking Bot</title>
   </head>
-  <body style="background-color:rgb(20, 20, 20)">
+  <body style="background-color:rgb(20, 20, 20);">
+    <span> &nbsp;</span>
+    <span> &nbsp;</span>
     <div class="container">
-    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+    <header id="head" class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between p-2 mb-4 bg-dark rounded-3">
         <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-        <img src="https://cdn.discordapp.com/avatars/735435167837061170/4a38e8d069f868bc0ab7ff7a0a061c2e.png" alt="" width="50" height="50" class="">
-        <b><span class="fs-4 text-light">&nbsp;&nbsp;&nbsp;&nbsp;Ultra Banking Bot</span></b>
+            <span> &nbsp;</span>
+            <span> &nbsp;</span>
+        <img style="border-radius: 7px;" src="https://cdn.discordapp.com/avatars/735435167837061170/4a38e8d069f868bc0ab7ff7a0a061c2e.png" alt="" width="50" height="50" class="rounded-1">
+        <b><span class="fs-3 text-light">&nbsp;Ultra Banking Bot</span></b>
         </a>
-        <ul id="hvrmenuulbar" class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 pt-3 pb-1">
-        <li><b><a href="#features" class="nav-link px-3 link-secondary">Home</a></b></li>
-        <li><b><a href="#supportedSites" class="nav-link px-3 link-secondary">Commands</a></b></li>
+        <ul id="hvrmenuulbar" class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><b><a href="/" class="nav-link px-3 link-secondary">Home</a></b></li>
+        <li><b><a href="/commands/" class="nav-link px-3 link-secondary">Commands</a></b></li>
         <li><b><a href="#" class="nav-link px-3 link-secondary">Discord</a></b></li>
         <li><b><a href="#" class="nav-link px-3 link-secondary">FAQ</a></b></li>
         </ul>
-        <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-light me-2 rounded-0 p-2">&nbsp;&nbsp;&nbsp;&nbsp;Log in&nbsp;&nbsp;&nbsp;&nbsp;</button>
-        </div>
+        <div id="logindiv" class="col-md-3 text-end">
+          <a id="inviterem" href="https://discord.com/api/oauth2/authorize?client_id=735435167837061170&redirect_uri=http%3A%2F%2Flocalhost%3A80&response_type=token&scope=identify">
+             <button type="button" id="login" class="btn btn-outline-light me-2 text-center rounded-4 p-2">&nbsp;&nbsp;&nbsp;&nbsp;Log in&nbsp;&nbsp;&nbsp;&nbsp;</button>
+               </a>
+      </div>
     </header>
-
     </div>
+    <main>
+      <div class="overflow-hidden" style="max-height: 50vh;"></div>
+      <div class="b-example-divider"></div>
+      <div class="px-5 pt-5 py-5 position-relative my-5 text-center text-light mx-auto">
+        <div class="overflow-hidden" style="max-height: 40vh;">
+          
+        <h1 class="display-3 fw-bold ">Ultra Banking Bot</h1>
+        <div class="col-lg-6 mx-auto mb-4">
+          
+          <p class="lead mb-4">The ultra-most* best ecconomy discord bot ever.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-4">
+            <button id="invite" style="height: 50px; width: 2000;" type="button" class="btn btn-primary btn-lg px-5">Invite</button>
+          </div>
+        </div>
+      </div>        <div style="transform: translate(10px, -350px);"><svg width="1280" height="642" viewBox="0 0 1280 642" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M157.146 352.912C117.195 372.138 102.571 424.635 124.482 470.168C146.394 515.701 196.544 537.028 236.495 517.802C276.447 498.576 291.071 446.079 269.159 400.546C247.248 355.013 197.098 333.686 157.146 352.912Z" fill="#E0AF00"/>
+        <path d="M174.649 347.343C134.698 366.569 120.074 419.066 141.985 464.599C163.897 510.132 214.047 531.459 253.998 512.233C293.95 493.007 308.574 440.51 286.662 394.977C264.751 349.444 214.601 328.117 174.649 347.343Z" fill="#FFC700"/>
+        <path d="M256.405 476.327L266.061 496.389L240.353 508.761L230.892 489.103C221.363 492.695 211.703 495.068 201.911 496.221L191.237 474.042C205.263 473.086 219.165 469.293 232.943 462.662C247.393 455.708 252.839 448.534 249.281 441.141C245.884 434.084 239.985 432.577 231.584 436.62L214.446 444.869C190.923 456.19 174.066 451.265 163.877 430.094C154.95 411.544 160.21 395.727 179.656 382.643L170.971 364.597L196.679 352.225L205.17 369.867C215.505 365.887 225.602 363.304 235.461 362.118L246.136 384.297C232.11 385.253 217.401 389.435 202.01 396.842C190.518 402.373 186.55 408.835 190.108 416.228C193.504 423.285 199.067 424.954 206.796 421.234L225.951 412.015C247.458 401.665 263.306 407.075 273.495 428.246C282.39 446.728 276.693 462.756 256.405 476.327Z" fill="#C29F20"/>
+        <g clip-path="url(#clip0)">
+        <path d="M1018.7 296.375C1061.84 306.604 1106.26 275.038 1117.92 225.87C1129.58 176.702 1104.06 128.551 1060.92 118.323C1017.78 108.094 973.353 139.66 961.695 188.828C950.037 237.996 975.559 286.146 1018.7 296.375Z" fill="#E0AF00"/>
+        <path d="M1001.6 289.677C1044.74 299.906 1089.16 268.34 1100.82 219.172C1112.48 170.004 1086.95 121.853 1043.81 111.625C1000.67 101.396 956.25 132.962 944.592 182.13C932.934 231.298 958.456 279.448 1001.6 289.677Z" fill="#FFC700"/>
+        <path d="M1019.33 137.999L1024.47 116.334L1052.23 122.916L1047.19 144.143C1056.86 147.355 1065.86 151.596 1074.19 156.867L1068.51 180.817C1057.01 172.726 1043.83 166.917 1028.95 163.39C1013.34 159.69 1004.6 161.832 1002.7 169.816C1000.9 177.437 1004.53 182.323 1013.6 184.473L1032.11 188.86C1057.51 194.882 1067.5 209.324 1062.08 232.185C1057.33 252.217 1043.29 261.19 1019.94 259.105L1015.32 278.591L987.561 272.01L992.077 252.959C981.542 249.542 972.073 245.189 963.668 239.9L969.345 215.95C980.842 224.041 994.9 230.057 1011.52 233.997C1023.93 236.939 1031.08 234.418 1032.97 226.435C1034.78 218.815 1031.51 214.015 1023.17 212.036L1002.48 207.133C979.257 201.627 970.354 187.443 975.774 164.581C980.505 144.623 995.025 135.762 1019.33 137.999Z" fill="#C29F20"/>
+        </g>
+        <g clip-path="url(#clip1)">
+        <path d="M993.123 544.767C1024.55 576.04 1078.92 572.353 1114.56 536.533C1150.21 500.714 1153.62 446.324 1122.19 415.052C1090.76 383.78 1036.39 387.466 1000.75 423.286C965.109 459.106 961.694 513.495 993.123 544.767Z" fill="#E0AF00"/>
+        <path d="M982.045 530.117C1013.47 561.389 1067.84 557.703 1103.49 521.883C1139.13 486.063 1142.54 431.674 1111.11 400.401C1079.69 369.129 1025.31 372.815 989.672 408.635C954.031 444.455 950.616 498.844 982.045 530.117Z" fill="#FFC700"/>
+        <path d="M1076.46 410.085L1092.16 394.301L1112.38 414.424L1097 429.89C1103.56 437.68 1109.01 445.999 1113.36 454.848L1095.99 472.297C1090.42 459.389 1082.22 447.543 1071.38 436.758C1060.01 425.447 1051.43 422.7 1045.65 428.516C1040.12 434.069 1040.67 440.133 1047.28 446.709L1060.76 460.123C1079.27 478.536 1080.23 496.07 1063.66 512.726C1049.14 527.32 1032.48 527.626 1013.66 513.644L999.539 527.841L979.314 507.718L993.124 493.838C985.93 485.418 980.133 476.757 975.733 467.855L993.093 450.405C998.664 463.313 1007.5 475.791 1019.61 487.838C1028.65 496.834 1036.07 498.424 1041.85 492.608C1047.38 487.056 1047.1 481.255 1041.02 475.205L1025.95 460.212C1009.03 443.377 1008.86 426.632 1025.43 409.976C1039.89 395.436 1056.9 395.472 1076.46 410.085Z" fill="#C29F20"/>
+        </g>
+        <g clip-path="url(#clip2)">
+        <path d="M90.7795 122.068C66.2936 159.03 80.5935 211.617 122.719 239.524C164.845 267.43 218.845 260.09 243.331 223.128C267.817 186.166 253.517 133.58 211.391 105.673C169.265 77.7657 115.265 85.1063 90.7795 122.068Z" fill="#E0AF00"/>
+        <path d="M102.967 108.327C78.4815 145.289 92.7816 197.875 134.907 225.782C177.033 253.689 231.033 246.348 255.519 209.387C280.005 172.425 265.705 119.838 223.579 91.9312C181.453 64.0243 127.453 71.3648 102.967 108.327Z" fill="#FFC700"/>
+        <path d="M239.212 177.307L257.774 189.602L242.018 213.386L223.83 201.339C217.482 209.301 210.397 216.283 202.574 222.285L182.054 208.692C193.615 200.693 203.618 190.32 212.062 177.573C220.918 164.204 221.926 155.253 215.086 150.722C208.556 146.398 202.717 148.121 197.568 155.894L187.065 171.751C172.649 193.515 155.646 197.91 136.058 184.934C118.896 173.565 115.321 157.285 125.333 136.093L108.637 125.033L124.392 101.248L140.715 112.06C147.557 103.352 154.91 95.9656 162.774 89.9019L183.295 103.494C171.734 111.493 161.236 122.613 151.804 136.852C144.761 147.485 144.659 155.068 151.499 159.599C158.028 163.924 163.661 162.511 168.398 155.36L180.137 137.637C193.318 117.739 209.703 114.277 229.29 127.253C246.39 138.579 249.698 155.265 239.212 177.307Z" fill="#C29F20"/>
+        </g>
+        <defs>
+        <clipPath id="clip0">
+        <rect width="243" height="259" fill="white" transform="translate(1049.75 374.222) rotate(-140.963)"/>
+        </clipPath>
+        <clipPath id="clip1">
+        <rect width="243" height="259" fill="white" transform="translate(978.895 627.361) rotate(-109.445)"/>
+        </clipPath>
+        <clipPath id="clip2">
+        <rect width="243" height="259" fill="white" transform="translate(7 124.35) rotate(-30.779)"/>
+        </clipPath>
+        </defs>
+        </svg>
+        </div>
+        <span>ee</span>
+    </main>
 
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-bundle.js"></script>
     <script src="https://unpkg.com/@statuspage/status-widget/dist/index.js"></script>
+    
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
